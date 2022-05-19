@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login1.css">
+
+    <!-- deve ser linkado primeiro -->
+    <script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js"></script>
+
+    <script src="./js/login.js"></script>
+
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="div_form">
+            <img id="img_aspas" src="img/aspas.svg" alt="">
+            <p id="p1">A programação não é sobre o <br> que você sabe. <br> É sobre o que você pode <br> descobrir."</p>
+            <p id="p2">Cris Pine</p>
+            <img id="img_explo" src="img/explorador.svg" alt="">
+        </div>
+            <form id="form" class="form">
+                <h2 class="texto_secundario">Login</h2>
+                <div class="corpoFormulario">
+                    <label class="label_input" for="">
+                    <i class="fa-solid fa-envelope iconeinput"></i>
+                    <input type="email" id="emailusuario" placeholder="Insira seu e-mail"/>
+                    </label>
+                </div>
+                <div class="corpoFormulario">
+                    <label class="label_input" for="">
+                    <i class="fa-solid fa-lock iconeinput"></i>
+                    <input type="password" id="senhausuario" placeholder="Insira sua senha"/>
+                </label>
+                </div>
+                
+                <a href="areausuario.html">
+                    <button class="botao_inscrever" type="button">Entrar<button>
+                </a>
+            </form>
+    </div>
+    <script src="https://kit.fontawesome.com/4c0cc4e1de.js" crossorigin="anonymous"></script>
+</body>
+</html>

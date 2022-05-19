@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat',sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img{
+    display: flex;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.botao_voltar{
+    display: flex;
+    margin-left: 220px;
+    margin-top: 15px;
+    margin-right: 0;
+}
+.botao_voltar button{
+    background-color: #5599FF;
+    border: none;
+    width: 90px;
+    height: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.botao_voltar button i{
+    color: white;
+    width: 100%;
+}
+
+.dados_display{
+    display: flex;
+    width: 80%;
+    height: 50vh;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.dados_usuario.perfil{
+    width: 25%;
+    margin-left: 100px;
+    margin-right: 55px;
+    background-color: #F5F5F5;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.dados_usuario.perfil img{
+    margin-top: 65px;
+}
+.dados_usuario.perfil p{
+    margin-top: 40px;
+    color: #363636;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+.dados_usuario.perfil > a >button{
+    width: 40px;
+    height: 40px;
+    margin-top: 50px;
+    border-radius: 60px;
+    border: none;
+    background-color: #5599FF;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.dados_usuario.perfil > a >button >i{
+    color: white;
+}
+
+.sair > a >button{
+    margin-left: 10px;
+    margin-right: 60px;
+    height: 50px;
+    width: 50px;
+    border:none;
+    border-radius: 60px;
+    background-color:#4f6380;
+    cursor: pointer;
+}
+.sair > a > button > i{
+    color:#ffffff;
+}
+
+
+
+.dados_usuario.info{
+    width: 70%;
+    text-align: left;
+    align-items: center;
+}
+
+.info_control{
+    color: #363636;
+}
+
+.info_control >h2.nome{
+    margin-top: 40px;
+}
+.info_control >h2{
+    font-size: 1.8rem;
+}
+
+.info_control > h3{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.info_control button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.info_control button > .fa-eye-low-vision{
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}

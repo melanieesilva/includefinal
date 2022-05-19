@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="container">
+        <div class="div_form">
+            <h2 class="texto">Comece sua jornada na programação;</h2>
+            <img class = "img_menina"src="./img/code.svg">
+        </div>
+            <form id="form" class="form">
+                <h2 class="texto_secundario">Faça o seu cadastro!</h2>
+                <div class="corpoFormulario">
+                <label class="label_input" for="">
+                    <i class="fa-solid fa-user iconeinput"></i>
+
+                    <input type="text" id="nomeusuario" placeholder="Insira seu nome..."/>
+
+                </label>
+                </div>
+                <div class="corpoFormulario">
+                    <label class="label_input" for="">
+                    <i class="fa-solid fa-envelope iconeinput"></i>
+
+                    <input type="email" id="emailusuario" placeholder="Insira seu e-mail..."/>
+
+                </label>
+                </div>
+                <div class="corpoFormulario">
+                    <label class="label_input" for="">
+                    <i class="fa-solid fa-lock iconeinput"></i>
+
+                    <input type="password" id="senhausuario" placeholder="Crie uma senha..."/>
+
+                </label>
+                </div>
+                    <button class="botao_inscrever" type="submit" id="botao_inscrever">Inscrever-se</button>
+            </form>
+    </div>
+
+    <div class="container_sucesso">
+        <div class="mensagem">
+            <h2 id="titulo_validacao">Cadastro efetuado</h2>
+            <hr/>
+            <span>Tudo certo! O seu cadastro foi concluído e você já pode iniciar sua jornada!
+            </span>
+            <hr/>
+            <div class="escolha">
+                <a href="areausuario.html">
+                    <button class="botao_continuar">Continuar</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script type="module">
+   // Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+const firebaseConfig = {
+  apiKey: "AIzaSyB0QRUi4blxwMo6wD-zC3c-v0VMBDKiRao",
+  authDomain: "projeto-web-a5146.firebaseapp.com",
+  projectId: "projeto-web-a5146",
+  storageBucket: "projeto-web-a5146.appspot.com",
+  messagingSenderId: "813216167665",
+  appId: "1:813216167665:web:fd3d553f609e08b8c79b50"
+};
+            // Initialize Firebase
+    import{getDatabase,set,get,ref,child,update,remove}
+    from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword } 
+    from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js";
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        const auth = getAuth();
+
+    // ============== Referências =====================
+
+    var inscrever =  document.getElementById('botao_inscrever');
+    var ler =  document.getElementById('botao_inscrever');
+
+    // ================ CRUD  ========================
+
+
+    //CADASTRO
+
+    inscrever.addEventListener('click', (e) =>{
+    var nome  = document.getElementById('nomeusuario').value;
+    var email = document.getElementById('emailusuario').value;
+    var senha = document.getElementById('senhausuario').value;
+
+    set(ref(db, "Usuarios/" + nome),{
+
+      Nome:  nome,
+      Email: email,
+      Senha: senha
+
+     });
+    
+     createUserWithEmailAndPassword(auth, email, senha)
+        .then((userCredential) => {
+         // Signed in
+        const user = userCredential.user;
+        // ...
+        alert("email cadastrado");
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+                // ..
+            alert('errorMessage');
+         });
+
+
+     if(nome){
+        console.log("DEU CERTO")
+     }
+
+});
+
+    //LER
+
+    ler.addEventListener('click', (e) =>{
+
+    var nome  = document.getElementById('nomeusuario').value;
+    var email = document.getElementById('emailusuario').value;
+    var senha = document.getElementById('senhausuario').value;
+
+    const dbRef =  ref(db);
+
+    set(ref(db, "Usuarios/" + nome),{
+
+    Nome:  nome,
+    Email: email,
+    Senha: senha
+
+    });
+
+    get(child(dbRef, "Usuarios/")).then((snapshot) => {
+    if (snapshot.exists()) {
+        console.log(snapshot.val());
+    } else {
+        console.log("Dados indefinidos");
+    }
+    }).catch((error) => {
+    console.error(error);
+    });
+
+    });
+
+
+
+      </script>
+    <script src="./js/cadastro.js"></script>
+    <script src="https://kit.fontawesome.com/4c0cc4e1de.js" crossorigin="anonymous"></script>
+</body>
+</html>

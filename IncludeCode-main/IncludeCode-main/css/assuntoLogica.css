@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+}
+body{
+    width: 100%;
+    background-color:#f0f0f0;
+    display: flex;
+}
+
+nav{
+    background-color: rgb(255, 255, 255);
+    width: 230px;
+    height: 950vh;
+    margin:0;
+    border-radius: 0px 30px 30px 0px;
+}
+
+.logoC{
+    width: 70px;
+    height: 70px;
+    margin-top: 80px;
+}
+
+.logoC img{
+    width: 100%;
+}
+
+.navegacao{
+    margin-left: 30px;
+    margin-top: 45px;
+}
+.navegacao p{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 30px;
+    
+}
+.navegacao > a > input{
+    width: 80px;
+    height: 40px;
+    background-color:#5599FF;
+    border-radius: 40px;
+    border: none;
+    margin-top: 380px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+
+/* ESTILIZANDO CONTEÚDO PRINCIPAL - SECTION */
+
+section{
+    background-color: rgb(255, 255, 255);
+    width: 750px;
+    height: 950vh;
+    margin-left: 100px;
+    margin-top: 25px;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.marcador_logica{
+    background-color: #5599FF;
+    width: 190px;
+    height: 45px;
+    border-radius: 0px 30px 30px 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+.marcador_logica p{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-left: 235px;
+}
+
+.marcador_algo{
+    background-color: #5599FF;
+    width: 190px;
+    height: 45px;
+    border-radius: 0px 30px 30px 0px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+}
+.marcador_algo p{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-left: 135px;
+}
+
+.marcador_repre{
+    background-color: #5599FF;
+    width: 400px;
+    height: 50px;
+    border-radius: 0px 30px 30px 0px;
+    margin-top: 45px;
+}
+.marcador_repre p{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-left: 50px;
+}
+
+.container, .conteudo1, .conteudo2,.conteudo3, .conteudo6,.img_copi,.img_igredientes,.img_pseudo{
+    display: inline-block;
+}
+.container,.img_sinalverde, .conteudo6-1, .img_sinalred, .conteudo9, .img_fluxo,.conteudo10{
+    display: inline-block;
+}
+
+.container,.conteudo12, .img_bolo2{
+    display: inline-block;
+}
+
+.conteudo1{
+    width: 380px;
+    height: 160px;
+    margin-left: 45px;
+    margin-top: 45px;
+}
+.conteudo1 h3{
+    font-size: 1.5rem;
+}
+.conteudo1 p{
+    margin-top: 15px;
+}
+
+.conteudo2{
+    width: 410px;
+    height: 100px;
+    margin-left: 45px;
+    margin-top: 5px;
+}
+.conteudo3{
+    width: 350px;
+    height: 400px;
+    margin-left: 45px;
+}
+.conteudo3 ul{
+    list-style: none;
+}
+.conteudo3 li{
+    font-size: 1.5rem;
+}
+.conteudo4{
+    width: 85%;
+    height: 130px;
+    margin-left: 45px;
+}
+
+.conteudo5{
+    width: 85%;
+    height: 140px;
+    margin-left: 45px;
+}
+
+.titulo_cont6{
+    width: 500px;
+    height:30px;
+    margin-left: 45px;
+    margin-top: 20px;
+}
+
+.conteudo6{
+    width: 400px;
+    height:250px;
+    margin-left: 45px;
+}
+
+.conteudo6 ul{
+    list-style: none;
+    margin-top: 60px;
+    margin-left: 40px;
+}
+.conteudo6 ul li{
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.conteudo6-1{
+    width:400px;
+    height: 250px;
+    margin-left: 45px;
+}
+
+.conteudo6-1 ul{
+    list-style:none;
+    margin-left: 40px;
+}
+.conteudo6-1 ul li{
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.conteudo7{
+    width: 85%;
+    height: 75px;
+    margin-left: 45px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+
+.conteudo8{
+    width: 85%;
+    height: 125px;
+    margin-left: 45px;
+    margin-top: 60px;
+    font-size: 1.2rem;
+}
+
+.conteudo9{
+    width: 400px;
+    height: 270px;
+    margin-left: 45px;
+    margin-top: 15px;
+}
+
+.conteudo10{
+    width: 350px;
+    height: 270px;
+    margin-left: 45px;
+    margin-top: 15px;
+}
+.titulo_cont9{
+    width: 85%;
+    height: 65px;
+    margin-left: 45px;
+}
+
+.conteudo11{
+    width: 85%;
+    height: 55px;
+    margin-left: 45px;
+    margin-top: 25px;
+    font-size: 1.2rem;
+}
+
+.conteudo11 img{
+    width: 55%;
+    margin-top: 30px;
+}
+
+.conteudo12{
+    width:400px;
+    height: 250px;
+    margin-left: 45px;
+    margin-top: 600px;
+    font-size: 1.2rem;
+}
+
+.conteudo13{
+    margin-left: 45px;
+    margin-top: 15px;
+}
+.conteudo13 img{
+    width: 50%;
+}
+
+.finalizacao{
+    background-color: #5599FF;
+    width: 650px;
+    height: 50px;
+    text-align:left;
+    border-radius: 0 40px 40px 0px;
+    color: rgb(0, 0, 0);
+    margin-top: 25px;
+}
+
+
+
+.img_copi{
+    width: 250px;
+    height: 200px;
+    float: right;
+    margin-right: 45px;
+    margin-top: 45px;
+}
+.img_copi img{
+    width: 100%;
+}
+
+.img_igredientes{
+    width: 355px;
+    height: 400px;
+    float:right;
+}
+.img_igredientes img{
+    width: 100%;
+    height: 100%;
+}
+
+.img_sinalverde{
+    float: right;
+    margin-right: 55px;
+    margin-top: 12px;
+    padding-top: 50px;
+}
+.img_sinalverde img{
+    width:250px;
+}
+.img_sinalred{
+    float: right;
+    margin-right: 55px;
+    padding-top: 50px;
+}
+.img_sinalred img{
+    width:210px;
+}
+
+.img_cont8{
+    width: 600px;
+    height: 200px;
+    margin-top:25px;
+    margin-left: 45px;
+}
+
+.img_cont8 img{
+    width: 100%;
+}
+
+.img_fluxo{
+    width: 250px;
+    height: 230px;
+    margin-top: 40px;
+    margin-right: 55px;
+    float: right;
+}
+.img_fluxo img{
+    width: 100%;
+    height: 100%;
+}
+
+.img_simbo{
+    width: 500px;
+    height: 500px;
+    margin-left: 45px;
+    margin-top: 30px;
+}
+.img_simbo img{
+    width: 100%;
+}
+
+.img_fluxograma{
+    width: 500px;
+    height: 500px;
+    margin-left: 45px;
+    margin-top: 30px;
+}
+.img_fluxograma img{
+    width: 100%;
+}
+.img_pseudo{
+    width: 300px;
+    height: 270px;
+    margin-top: 15px;
+    margin-right: 55px;
+    float: right;
+}
+.img_pseudo img{
+    width: 100%;
+}
+
+.img_etapas{
+    width: 600px;
+    height: 140px;
+    margin-top: 15px;
+    margin-left: 45px;
+}
+.img_etapas img{
+    width: 120%;
+}
+.img_bolo2{
+    float:right;
+    margin-top: 580px;
+    margin-right: 60px;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/editarperfil.css">
+    <title>Editar Perfil</title>
+</head>
+<body>
+    <header>
+        <img src="./img/logo.svg">
+    </header>
+    <article>
+        
+            <div class="botao_voltar">
+                <a href="gerenciarperfil.html">
+                    <button>
+                        <i class="fa-solid fa-angle-left fa-xl"></i>
+                    </button></a>
+
+                <button id="salvar" type="submit">
+                    <i class="fa-solid fa-floppy-disk fa-xl"></i>
+                </button>
+
+            </div>
+        
+        
+        <div class="dados_display">
+
+        <div class="dados_usuario perfil">
+                <img src="./img/imagemperfil1.svg">
+                <!-- <p id="nomeusuario"></p> -->
+        </div>
+        
+            
+        <div class="dados_usuario info">
+            <div class="info_control">
+
+            <h2 class="nome">Nome</h2>
+            
+            <form action="">
+                <input id="nomeusuario" type="text" placeholder="Altere seu nome...">
+
+                <h2 class="email">E-mail</h2>
+
+                <input id="emailusuario" type="email" placeholder="Altere seu e-mail...">
+
+                <h2 >Senha</h2>
+
+                <input id="senhausuario" type="password" placeholder="Altere sua senha...">
+                
+            </form>
+
+            </div>
+        </div>
+        </div>
+
+        <button class="deletar" id="deletar"><i class="fa-solid fa-trash fa-lg"></i></button>
+
+    </article>
+    <script type="module">
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+  apiKey: "AIzaSyB0QRUi4blxwMo6wD-zC3c-v0VMBDKiRao",
+  authDomain: "projeto-web-a5146.firebaseapp.com",
+  databaseURL: "https://projeto-web-a5146-default-rtdb.firebaseio.com",
+  projectId: "projeto-web-a5146",
+  storageBucket: "projeto-web-a5146.appspot.com",
+  messagingSenderId: "813216167665",
+  appId: "1:813216167665:web:fd3d553f609e08b8c79b50"
+};
+            // Initialize Firebase
+        import{getDatabase,set,get,ref,child,update,remove}
+        from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js";
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        const auth = getAuth();
+
+    //ATUALIZAR
+
+    document.getElementById('salvar').addEventListener('click',(e) =>{
+    
+    var nome  = document.getElementById('nomeusuario').value;
+    var email = document.getElementById('emailusuario').value;
+    var senha = document.getElementById('senhausuario').value;
+
+      update(ref(db, "Usuarios/" + nome),{
+    
+          Nome:  nome,
+          Email: email,
+          Senha: senha
+    
+      }).then(() => {
+         window.alert("Os dados foram alterados com sucesso!");
+      })
+      .catch((error) => {
+        window.alert("Falha ao alterar os dados, preencha os campos!");
+      });
+
+    });
+
+    //DELETAR
+
+    document.getElementById('deletar').addEventListener('click',(e) =>{
+    var nome  = document.getElementById('nomeusuario').value;
+    var email = document.getElementById('emailusuario').value;
+    var senha = document.getElementById('senhausuario').value;
+
+
+        remove(ref(db, "Usuarios/" + nome),{
+        
+            Nome:  nome,
+            Email: email,
+            Senha: senha
+      
+        }).then(() => {
+           window.alert("Os dados foram removidos com sucesso!");
+        })
+        .catch((error) => {
+          window.alert("Falha ao remover os dados, preencha os campos!");
+        });
+    
+    });
+
+    </script>
+    <script src="https://kit.fontawesome.com/4c0cc4e1de.js" crossorigin="anonymous"></script>
+    <script src="./js/gerenciarperfil.js"></script>
+</body>
+</html>
+</body>
+</html>

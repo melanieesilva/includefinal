@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+/* ==== Configurações gerais de estilo ==== */
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+html, body {
+  overflow: hidden;
+ }
+
+/* ==== Estilização do menu ==== */
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 15vh;
+  margin-top: 20px;
+}
+
+nav ul{
+  display: flex;
+  flex-direction: row;
+}
+
+nav li{
+  list-style: none;
+  letter-spacing: 2px;
+  margin-left: 32px;
+}
+
+nav a {
+   font-size: 1.3em;
+   font-weight: bold;
+   color: black;
+   text-decoration: none;
+   transition: 0.3s;
+  
+}
+
+nav li:hover{
+   font-size: 1.1em;
+}
+
+hr{
+  margin: auto;
+  width: 70px;
+  height: 3px;
+  background-color: #0078FF;
+  border: none;
+  margin-top: 5px;
+}
+
+
+/* Estilização do conteúdo principal --- Home page */
+
+main{
+  display: flex;
+  flex-direction: row;
+  height: 85vh;
+  max-width: 1440px;
+  min-width: 568px;
+  margin: auto;
+}
+
+article{
+  width: 80vh;
+  height: 80vh;
+  margin: auto;
+  margin-left: 130px;
+  padding: 5px;
+}
+
+section{
+  width: 75vh;
+  height: 75vh;
+  margin: auto;
+  margin-top: 25px;
+  justify-content: center;
+ 
+}
+
+section.conteudo h1{
+  margin-top: 55px;
+  letter-spacing: 1px;
+  font-size: 3.5em;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+article.home > section p{
+  margin-right: 100px;
+}
+
+section p{
+ margin-top: 30px;
+ font-size: 1.7em;
+ font-weight: 500;
+ letter-spacing: -0.075em;
+ line-height: 1.5em;
+ text-align:left;
+}
+
+/* Estilização do conteúdo principal --- Sobre nós */
+
+aside h1{
+  font-size: 2.0em;
+  margin: auto;
+  margin-top: 90px;
+}
+
+aside p {
+  font-size: 1.5em;
+  text-align: justify;
+  margin-right: 200px;
+}
+
+
+/* Estilização do conteúdo principal --- Fale Conosco */
+
+#texto-ajuda{
+  line-height: 1em;
+  text-align: left;
+}
+
+.ajuda{
+  margin-top: 20px;
+}
+
+/* Estilização do conteúdo principal --- Cursos disponíveis */
+
+.Cursos h1{
+   font-size: 2.5em;
+   text-align: left;
+}
+
+.Cursos p{
+   font-size: 1.5em;
+}
+
+.mae{
+  margin-top: -70px;
+  margin-right: 100px;
+}
+
+.mae img{
+  width: 500px;
+  height: 500px;
+}
+
+/* Estilização da caixa de cursos */
+
+
+
+/* Estilização do botão - Comece Já! */
+
+.botao{
+  margin-top: 35px;
+  margin-left: 10%;
+}
+
+input{
+  background-color: #5599FF;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 580;
+  border-radius: 40px;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilização do botão - Enviar */
+
+#caixa{
+  background-color: ivory;
+  border-radius: 10px;
+  height: 130px;
+  width: 430px;
+  padding: 10px;
+  color: black;
+}
+
+.enviar{
+   margin-top: 15px;
+   margin-left: 150px;
+}
+
+.enviar input{
+  border-radius: 30px;
+  width: 150px;
+  
+}
+
+
+/* Estilização da imagem001 */
+
+aside img{
+   width: 480px;
+   height: 520px;
+   margin-right: 90px;
+}
+
+/* Estilização da imagem003  */
+
+.imagem003{
+  width: 480px;
+  height: 500px;
+  margin-left: -50px;
+}
+
+/* Responsividade do site */
+
+@media screen and (max-width: 768px) {
+   *{
+     flex-wrap: wrap;
+     width: auto;
+     height: auto;
+   }
+
+    img{
+      width: 100%;
+    }
+
+    #texto-ajuda{
+      margin-top: 70px;
+    }
+
+    aside img{
+      margin-left: 140px;
+   }
+
+    section{
+      margin-top: 70px;
+    }
+}
+
+
+

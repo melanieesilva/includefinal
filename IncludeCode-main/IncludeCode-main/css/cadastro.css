@@ -1,0 +1,186 @@
+/* Formato geral */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ececec;
+}
+
+/* Formato do container*/
+.container{
+    width: 60%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.212);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+/* Formato da primeira divisão do container */
+
+.img_code{
+    width: 88%;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.div_form > h2 {
+    font-size: 2.5rem;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    color: #EAEAEA;
+}
+
+.div_form{
+    max-width: 50%;
+    background-color: #6EA8E9;
+    border-radius: 10px 30px 30px 10px;
+    flex-direction: column;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Formato da segunda divisão do container */
+
+.texto_secundario{
+    padding-bottom: 30px;
+    font-size: 1.8rem;
+    color: #6EA8E9;
+}
+
+
+.form{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex:auto;
+}
+
+.form input{
+    border: none;
+    height: 55px;
+    background-color: #f1f1f1;
+    width: 200px;
+    outline:0;
+    border-radius: 30px;
+}
+
+.label_input{
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 25px;
+    border-radius: 30px;
+}
+
+.iconeinput{
+    color: #6EA8E9;
+    padding: 0 9px;
+    margin-left: 10px;
+}
+
+.botao_inscrever{
+    background-color: transparent;
+    border-radius: 50px;
+    border: 4px solid #6EA8E9 ;
+    font-size: 15px;
+    padding: 7px 15px;
+    color: #6EA8E9;
+    font-weight:bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Estilizando o modal de validação */
+
+.container_sucesso{
+    width: 100vw;
+    position: absolute;
+    top: 30px;
+    z-index: 999;
+    justify-content: center;
+}
+
+.mensagem{
+    display: none;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    width: 30%;
+    margin: auto;
+    margin-top: 250px;
+}
+
+.ativo{
+    display: flex;
+}
+
+.ativo.mensagem{
+    animation: mensagem .4s;
+}
+
+@keyframes mensagem {
+    from{
+        opacity: 0;
+        transform: translate(0,-60px,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0,0,0);
+    }
+}
+
+.blurAtivo{
+    filter: blur(20px);
+}
+
+
+hr {
+    border: 0px;
+    border-top: 1px solid lightgray;
+}
+
+.container_sucesso > .mensagem h2{
+    padding-bottom: 10px;
+    margin-left: 0;
+    color: #333333;
+}
+
+span{
+    margin: 15px auto;
+}
+
+.escolha{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.escolha button{
+    font-size:medium;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.botao_continuar{
+    background-color: #6EA8E9;
+}
