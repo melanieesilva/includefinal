@@ -34,16 +34,15 @@
 
                <div class="ajuda">
                 <form action="https://formsubmit.co/uriel.h.ribeiro@gmail.com" method="POST">
-                  <input id="caixa" type="text">
-               </div>
-
-               <div class="enviar">
-                <a href="Inicio.html"> <input type="submit" value="Enviar" onclick=""> </a>  
-              </div> 
+                  <input type="hidden" name="_subject" value="New Email!">
+                  <input type="email" name="email" id="inputEmail" placeholder="Digite seu e-mail">
+                  <input type="hidden" name="_next" value="http://127.0.0.1:5500/Agradecimento.html">
+                  <input id="caixa" type="text" name="message">
+                  <button type="submit" class="enviar">Enviar</button>
             </form>
+          </div>
               </section>
           </article> 
-
           <aside>
               <img src="./img/meninalivro.svg" alt="meninalivro">
           </aside>

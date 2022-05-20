@@ -183,9 +183,19 @@ input{
 
 /* Estilização do botão - Enviar */
 
+#inputEmail{
+    background-color: transparent;
+    border-bottom: 3px solid black;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+
 #caixa{
-  background-color: ivory;
+  background-color: rgb(245, 245, 245);
   border-radius: 10px;
+  border-top: 80px;
   height: 130px;
   width: 430px;
   padding: 10px;
@@ -193,14 +203,21 @@ input{
 }
 
 .enviar{
-   margin-top: 15px;
+   margin-top: 30px;
    margin-left: 150px;
+   background-color: #5599FF;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 580;
+  border-radius: 40px;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
 }
 
-.enviar input{
+.enviar button{
   border-radius: 30px;
   width: 150px;
-  
 }
 
 
